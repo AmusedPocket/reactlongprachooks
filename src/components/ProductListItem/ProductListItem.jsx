@@ -1,7 +1,7 @@
 function ProductListItem({ product, isSelected, onClick }) {
 
   return (
-    <div className={`product-list-item ${product.id === isSelected.id ? ' selected' : ''}`}>
+    <div className={`product-list-item ${isSelected && product.id === isSelected.id ? ' selected' : ''}`}>
       <img className="product-list-item-photo"
            src={product.photo.filename}
            alt={`${product.name}`}
